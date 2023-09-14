@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <form action="save_info" method="post">
+                {% csrf_token %}
+                <h1>Contact Form</h1>
+                <div class="name sub">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Name">
+                </div>
+                <div class="phone sub">
+                    <label for="phone">Phone</label>
+                    <input type="number" name="phone" id="phone" placeholder="Enter Phone Number">
+                </div>
+                <div class="email sub">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <input type="submit" value="Save">
+            </form>
+        </div>
+        <div class="contacts">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in contact %}
+                    <tr>
+                        <td>{{i.Name}}</td>
+                        <td>{{i.Phone}}</td>
+                        <td>{{i.Email}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
