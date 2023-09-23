@@ -1,0 +1,13 @@
+.main{
+    gap: 20px;
+    /* background-color: red; */
+}
+.contacts{
+    width: 100%;
+}
+table{
+    width: auto;
+}
+th,td{
+    width: auto;
+}

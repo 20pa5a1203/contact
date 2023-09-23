@@ -13,7 +13,8 @@
         <form action="signin" method="post">
             {% csrf_token %}
             <div class="signin">
-                <h1>Sign In</h1>
+                <h1>Welcome to Contact app <br>
+                    Sign In</h1>
                 <div class="mail">
                     <label for="email">Email</label>
                     <input type="email" placeholder="Enter Email" name="email" required>
@@ -27,7 +28,7 @@
                 </div>
                 <input type="submit" value="Sign In">
                 <div class="singup">
-                    <p>Don't have account? <a href="signup">Sign Up</a></p>
+                    <p>Don't have account? <a href="signup"><b>Sign Up</b></a></p>
                 </div>
             </div>
         </form>
